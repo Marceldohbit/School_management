@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Geist, Geist_Mono } from "next/font/google";
 
 const geistSans = Geist({
@@ -22,12 +23,8 @@ export default function Home() {
           Manage schools easily — add new ones or explore the list.
         </p>
         <div className="actions">
-          <a href="/addSchool" className="btn">
-            Add School
-          </a>
-          <a href="/showSchools" className="btn secondary">
-            Show Schools
-          </a>
+          <Link href="/addSchool" legacyBehavior><a className="btn">Add School</a></Link>
+          <Link href="/showSchools" legacyBehavior><a className="btn secondary">Show Schools</a></Link>
         </div>
       </div>
 
